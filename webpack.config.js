@@ -1,7 +1,8 @@
 const path = require("path");
+const htmlwebpack = require("html-webpack-plugin");
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   entry: path.resolve(__dirname, "src", "index.jsx"),
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -11,6 +12,11 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
   },
+  plugins: [
+    new htmlwebpack({
+      template: path.resolve(__dirname, "public", "index.html"),
+    }),
+  ],
   devServer: {
     static: {
       directory: path.resolve(__dirname, "public"),
