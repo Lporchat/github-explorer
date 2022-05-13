@@ -14,7 +14,7 @@ module.exports = {
   },
   // aquivos suportados
   resolve: {
-    extensions: [".js", ".jsx", ".ts", "tsx"],
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
   plugins: [
     isDevelopment && new ReactRefreshWebpackPlugin(),
